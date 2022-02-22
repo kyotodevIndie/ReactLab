@@ -1,10 +1,14 @@
-import "./styles.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./Pages/Home";
 
-export default function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/*  <Route path="sobre" element={<Sobre />} />
+        <Route path="contato" element={<Contato />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
